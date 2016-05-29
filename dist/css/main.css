@@ -1,0 +1,42 @@
+html {
+  /*Just for styling purposes*/
+  font-family: 'Merriweather', serif;
+}
+
+.main_column {
+  width:60%;
+  float:left;
+  margin:0 5% 0 2.5%;  
+}
+
+.aside_column {
+  width:30%;
+  float:left;
+  /*Just for styling purposes*/  
+  border-top:2px solid black;
+  padding: 10px 0;
+}
+
+/*Just for styling purposes*/
+.titles h1 {
+  font-size:40px;
+  font-weight:300;
+  margin:0 0 1em 0;
+  line-height:1.5;
+}
+
+.main_column p {
+  font-size:18px;
+  font-weight:400;
+  margin:0 0 1em 0;
+  line-height:1.5;
+}
+
+.aside_column p {
+  font-size:24px;
+  font-weight:300;
+  font-style:italic;
+  margin:0 ;
+  line-height:1.5;
+}
+
