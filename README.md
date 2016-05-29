@@ -21,7 +21,7 @@ We are assuming here that your layout has two columns. It doesn't matter the wid
 
 You can use the plugin in two different ways, regarding the extent of your needs. There is a simple version which you simply add at the end of the body like the old good javascript snippets; and there is a more precise version that allows to add some settings through an options' object.
 
-## Installing the simple version
+### Installing and using the simple version
 
 1. Download the file ```jquery.stackaside_simple.js``` and move it into your ```js``` folder.
 2. Add the file in a ```<script>``` tag at the bottom of the body; get sure it's placed after the jQuery:
@@ -31,7 +31,7 @@ You can use the plugin in two different ways, regarding the extent of your needs
 <script src="./dist/js/jquery.stackaside_simple.js"></script>
 ```
 
-2. Add the class ```.stack_aside``` to those ```<section>``` elements you wish to apply the plugin effect to.
+3. Add the class ```.stack_aside``` to those ```<section>``` elements you wish to apply the plugin effect to.
 
 ```html
 <section class="stack_aside">
@@ -43,6 +43,53 @@ You can use the plugin in two different ways, regarding the extent of your needs
 </aside>
 ```
 
+### Installing and using the complete version
 
+1. Download the file ```jquery.stackaside.js``` and move it into your ```js``` folder.
+2. Add the file in a ```<script>``` tag at the bottom of the body; get sure it's placed after the jQuery:
 
+```html
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="./dist/js/jquery.stackaside.js"></script>
+```
 
+3. Add the class ```.stack_aside``` to those ```<section>``` elements you wish to apply the plugin effect to.
+
+```html
+<section class="stack_aside">
+  <p>Lorem ipsum dolor sit amet, ut vis tritani dolorum recteque.<p>
+</section>
+  
+<aside>
+  <p>Has et etiam epicuri.</p>
+</aside>
+```
+
+4. In your main javascript file, assign the ```.stackAside()``` function to the ```.stack_aside```class, as follows:
+
+```js
+$(document).ready(function(){
+
+  $(".stack_aside").stackAside({});
+  
+  $(window).resize(function(){
+    $(".stack_aside").stackAside();
+  }).scroll(function() {
+    $(".stack_aside").stackAside();
+  });
+});
+```
+
+5. Add the options inside the ```.stackAside()``` function, as follows:
+
+```js
+$(document).ready(function(){
+  $(".stack_aside").stackAside({
+    bottomOffset : 20,
+    complete     : function() {alert('Taking off!')}
+  });
+```  
+
+Only two options are available by now: 
+  - ```bottomOffset``` allows you modify the distance between the affected aside element and the following. Its default is 20px.
+  - ```complete``` is a callback that passes a function once the plugin's action has been executed.
