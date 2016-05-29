@@ -16,3 +16,33 @@ Let's imagine you have written a paragraph and you added an element next to him 
 We are assuming here that your layout has two columns. It doesn't matter the width each one takes (60-40%, 30-70%...) as long as there are two of them, no more and no less. In case you are not familiar with multi-column layouts, feel free to use the simple CSS sheet included in the plugin. 
 
 <sup>*</sup> Note that there is nothing wrong with using ```<section>``` elements inside other ```<section>``` elements: it's a context that makes sense semantically speaking and it does not conflict the HTML5 specification. 
+
+## Two ways to use the pluggin
+
+You can use the plugin in two different ways, regarding the extent of your needs. There is a simple version which you simply add at the end of the body like the old good javascript snippets; and there is a more precise version that allows to add some settings through an options' object.
+
+## Installing the simple version
+
+1. Download the file ```jquery.stackaside_simple.js``` and move it into your ```js``` folder.
+2. Add the file in a ```<script>``` tag at the bottom of the body; get sure it's placed after the jQuery:
+
+```html
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="./dist/js/jquery.stackaside_simple.js"></script>
+```
+
+2. Add the class ```.stack_aside``` to those ```<section>``` elements you wish to apply the plugin effect to.
+
+```html
+<section class="stack_aside">
+  <p>Lorem ipsum dolor sit amet, ut vis tritani dolorum recteque.<p>
+</section>
+  
+<aside>
+  <p>Has et etiam epicuri.</p>
+</aside>
+```
+
+
+
+
