@@ -47,14 +47,11 @@ You can use the plugin in two different ways, regarding the extent of your needs
 
 1. Download the file ```jquery.stackaside.js``` and move it into your ```js``` folder.
 2. Add the file in a ```<script>``` tag at the bottom of the body; get sure it's placed after the jQuery:
-
 ```html
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="./dist/js/jquery.stackaside.js"></script>
 ```
-
 3. Add the class ```.stack_aside``` to those ```<section>``` elements you wish to apply the plugin effect to.
-
 ```html
 <section class="stack_aside">
   <p>Lorem ipsum dolor sit amet, ut vis tritani dolorum recteque.<p>
@@ -64,9 +61,7 @@ You can use the plugin in two different ways, regarding the extent of your needs
   <p>Has et etiam epicuri.</p>
 </aside>
 ```
-
 4. In your main javascript file, assign the ```.stackAside()``` function to the ```.stack_aside```class, as follows:
-
 ```js
 $(document).ready(function(){
 
@@ -79,7 +74,6 @@ $(document).ready(function(){
   });
 });
 ```
-
 5. Add the options inside the ```.stackAside()``` function, as follows:
 
 ```js
