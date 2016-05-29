@@ -1,11 +1,9 @@
 # stack-aside
 
 
-StackAside is a simple jQuery plugin that allows you to fix and stack elements in the aside colum as the user scrolls down the page.
+StackAside is a simple jQuery plugin that allows you to fix and stack elements in the aside colum as the user scrolls down the page. By default, every fixed element gets unfixed as it collapses vertically with another element. 
 
-By default, every fixed element gets unfixed as it collapses vertically with another element. 
-
-#How to use it
+## How to use it
 
 This pluggin is intended to use in a very specific manner, as it's aimed to achieve a sigular result. Once the plugin is installed (see instructions below), whenever you assign a ```<section>``` element a class of ```.stackAside``` , the element next to him will get fixed as the user scrolls down, and will unfix again when the scroll gets the end of that <section>. 
 
