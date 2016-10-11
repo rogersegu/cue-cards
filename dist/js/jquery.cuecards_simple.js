@@ -1,7 +1,7 @@
 (function ($) {
 
-  $(".stack_aside").next("aside").addClass("stackable");
-    var numOfCases = $(".stack_aside").size();
+  $(".cue_cards").next("aside").addClass("stackable");
+    var numOfCases = $(".cue_cards").size();
     for (i=0 ; i<numOfCases; i++){
       $(".stackable").eq(i).attr("id", "stackable" + i);
     }
@@ -11,11 +11,11 @@
   function getAbsolutePositions(element){
     var id = element.attr("id");	
     var marg_bottom = parseInt(element.css('marginBottom'));
-    var absolute_top = element.prev(".stack_aside").offset().top;
+    var absolute_top = element.prev(".cue_cards").offset().top;
     var bottom_ending = absolute_top + marg_bottom;
-    var offs = element.prev(".stack_aside").offset().left;
-    var wid = element.prev(".stack_aside").width(); 
-    var marg = parseInt(element.prev(".stack_aside").css('marginRight'));
+    var offs = element.prev(".cue_cards").offset().left;
+    var wid = element.prev(".cue_cards").width(); 
+    var marg = parseInt(element.prev(".cue_cards").css('marginRight'));
     var absolute_left = offs + wid + marg;    
     
     stackable_elements.push(["#"+id,absolute_top,absolute_left]);
@@ -38,10 +38,10 @@
       var absolute_top = stackable_elements[i][1];
       var absolute_left = stackable_elements[i][2];
       var scroll_pos = $(window).scrollTop();
-      var position_top = $(element).prev(".stack_aside").position().top;
+      var position_top = $(element).prev(".cue_cards").position().top;
       var bottom_offset = 20;
       var position_bottom = parseInt( position_top + 
-                                       $(element).prev(".stack_aside").height() -
+                                       $(element).prev(".cue_cards").height() -
                                        $(element).height()) - bottom_offset;
       
     if (scroll_pos <= position_top ){
