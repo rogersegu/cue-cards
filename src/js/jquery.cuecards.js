@@ -1,6 +1,6 @@
 (function($) {
 
-    $.fn.stackAside = function(options) {
+    $.fn.cueCards = function(options) {
         
         var settings = $.extend({
             bottomOffset : 20
@@ -19,7 +19,7 @@
         }); 
    
         function assignIds(){
-            var numOfCases = $(".stack_aside").size();
+            var numOfCases = $(".cue_cards").size();
             for (i=0 ; i<numOfCases; i++){
               $(".stackable").eq(i).attr("id", "stackable" + i);
             }
@@ -43,9 +43,9 @@
             var absolute_top = stackable_elements[i][1];
             var absolute_left = stackable_elements[i][2];
             var scroll_pos = $(window).scrollTop();
-            var position_top = $(element).prev(".stack_aside").position().top;
+            var position_top = $(element).prev(".cue_cards").position().top;
             var position_bottom = parseInt( position_top + 
-                                       $(element).prev(".stack_aside").height() -
+                                       $(element).prev(".cue_cards").height() -
                                        $(element).height()) - bottom_offset;
             if (scroll_pos <= position_top ){
                 $(element).css({"position": "absolute", "top": absolute_top, "left": absolute_left });
