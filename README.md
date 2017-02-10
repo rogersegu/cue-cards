@@ -5,7 +5,7 @@ CueCards is a simple jQuery plugin that allows you to fix and stack elements in 
 
 ## How to use it
 
-This pluggin is intended to use in a very specific manner, as it's aimed to achieve a sigular result. Once the plugin is installed (see instructions below), whenever you assign a ```<section>``` element a class of ```.cueCards``` , the element next to him will get fixed as the user scrolls down, and will unfix again when the scroll gets the end of that ```<section>```. 
+Once the plugin is installed (see instructions below), whenever you assign a ```<section>``` element a class of ```.cueCards``` , the element next to him will get fixed as the user scrolls down, and will unfix again when the scroll gets the end of that ```<section>```. 
 
 Let's imagine you have written a paragraph and you added an element next to him (a highlighted quote, another paragraph, an image or anything else) in the aside column. If you wish to get that side element fixed for a while as the user scrolls down the page, you just need to install the cueCards plugin and do the following:
 
