@@ -19,7 +19,7 @@
         }); 
    
         function assignIds(){
-            var numOfCases = $(".cue_cards").size();
+            var numOfCases = $(".cue_cards").length;
             for (i=0 ; i<numOfCases; i++){
               $(".stackable").eq(i).attr("id", "stackable" + i);
             }
